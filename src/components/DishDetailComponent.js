@@ -13,7 +13,7 @@ class DishDetail extends Component{
         };
 
  
-    }
+    } 
 
     renderDish(dish) {
 
