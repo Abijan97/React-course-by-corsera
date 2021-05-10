@@ -4,6 +4,7 @@ import './App.css';
 import Menu from './components/MenuComponent';
 import {DISHES} from './shared/dishes';
 import { Component } from 'react';
+import DishDetail from './components/DishDetailComponent';
 
 class App extends Component {
 
@@ -23,8 +24,8 @@ class App extends Component {
     </Navbar>
 
     <Menu dishes={this.state.dishes}/>
-
-      
+    
+      <DishDetail dishes={this.state.dishes}/>
       
     </div>
     );
