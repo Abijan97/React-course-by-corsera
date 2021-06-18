@@ -4,14 +4,20 @@ import './App.css';
 import Main from './components/MainComponent'
 import { Component } from 'react';
 import {BrowserRouter} from 'react-router-dom';
+import {Provider} from 'react-redux';
+import {ConfigureStore} from './Redux/configureStore';
+
+
+const store = ConfigureStore();
 
 class App extends Component {
 
  
   render(){
   return (
+    <Provider store={store}>
 
-    <BrowserRouter>
+    <BrowserRouter> 
      <div>
    <Main/>
     
@@ -20,6 +26,7 @@ class App extends Component {
     </div>
     
     </BrowserRouter>
+    </Provider>
    
     );
 }
